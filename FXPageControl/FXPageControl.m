@@ -125,7 +125,7 @@ const CGPathRef FXPageControlDotShapeTriangle = (const CGPathRef)3;
         }
         else
         {
-            CGContextTranslateCTM(context, (self.frame.size.width - size.width) / 2, self.frame.size.height / 2);
+            CGContextTranslateCTM(context, (self.frame.size.width - size.width - _dotSpacing), self.frame.size.height / 2);
         }
         
         for (int i = 0; i < _numberOfPages; i++)

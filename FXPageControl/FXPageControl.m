@@ -126,12 +126,12 @@ const CGPathRef FXPageControlDotShapeTriangle = (const CGPathRef)3;
     else
     {
       switch (self.dotsAlignment) {
-        case FXPageControlDotsAligmentRight: {
+        case FXPageControlDotsAlignmentRight: {
           CGFloat s = (self.frame.size.height / 2) * 0.9;
           CGContextTranslateCTM(context, (self.frame.size.width - size.width - s), s);
           }
           break;
-        case FXPageControlDotsAligmentCenter:
+        case FXPageControlDotsAlignmentCenter:
           CGContextTranslateCTM(context, (self.frame.size.width - size.width) / 2, self.frame.size.height / 2);
           break;
           

@@ -44,6 +44,10 @@
 #define weak_delegate unsafe_unretained
 #endif
 
+typedef NS_ENUM (NSInteger, FXPageControlDotsAlignment) {
+  FXPageControlDotsAlignmentRight = 0,
+  FXPageControlDotsAlignmentCenter = 1
+};
 
 extern const CGPathRef FXPageControlDotShapeCircle;
 extern const CGPathRef FXPageControlDotShapeSquare;
@@ -65,6 +69,7 @@ IB_DESIGNABLE @interface FXPageControl : UIControl
 @property (nonatomic, assign) IBInspectable NSInteger numberOfPages;
 @property (nonatomic, assign) IBInspectable BOOL defersCurrentPageDisplay;
 @property (nonatomic, assign) IBInspectable BOOL hidesForSinglePage;
+@property (nonatomic, assign) FXPageControlDotsAlignment dotsAlignment;
 @property (nonatomic, assign, getter = isWrapEnabled) IBInspectable BOOL wrapEnabled;
 @property (nonatomic, assign, getter = isVertical) IBInspectable BOOL vertical;
 

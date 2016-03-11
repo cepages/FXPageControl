@@ -125,8 +125,19 @@ const CGPathRef FXPageControlDotShapeTriangle = (const CGPathRef)3;
     }
     else
     {
-      CGFloat s = (self.frame.size.height / 2) * 0.9;
-      CGContextTranslateCTM(context, (self.frame.size.width - size.width - s), s);
+      switch (self.dotsAlignment) {
+        case FXPageControlDotsAligmentRight: {
+          CGFloat s = (self.frame.size.height / 2) * 0.9;
+          CGContextTranslateCTM(context, (self.frame.size.width - size.width - s), s);
+          }
+          break;
+        case FXPageControlDotsAligmentCenter:
+          CGContextTranslateCTM(context, (self.frame.size.width - size.width) / 2, self.frame.size.height / 2);
+          break;
+          
+        default:
+          break;
+      }
     }
     
     for (int i = 0; i < _numberOfPages; i++)
